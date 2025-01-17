@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Shirt Product Information</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link href='https://fonts.googleapis.com/css?family=Charmonman' rel='stylesheet'>
+    <style>
+        h1{
+            font-family: 'Charmonman';
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-title">Vesti</h1>
+    </header>
+
+    <div class="hero">
+        <h2 class="hero-title">Men T-Shirt</h2>
+    </div>
+
+    <div class="product-container">
+        <div class="product-image" id="productImage"></div>
+        <div class="product-info">
+            <p class="product-description">
+                This high-quality T-shirt is available in various colors and is perfect for any occasion!
+            </p>
+            <div class="color-options">
+                <button class="color-btn" onclick="changeImage('red')">Red</button>
+                <button class="color-btn" onclick="changeImage('green')">Green</button>
+                <button class="color-btn" onclick="changeImage('blue')">Blue</button>
+                <button class="color-btn" onclick="changeImage('black')">Black</button>
+                <button class="color-btn" onclick="changeImage('white')">White</button>
+                <button class="color-btn" onclick="changeImage('pink')">Pink</button>
+            </div>
+            <div class="quantity-size-container">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1">
+
+                <label for="size">Size:</label>
+                <select id="size" name="size">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="xlarge">X-Large</option>
+                </select>
+            </div>
+            <button class="shop-button">Shop Now</button>
+        </div>
+    </div>
+
+    <script>
+        function changeImage(color) {
+            document.getElementById('productImage').style.backgroundImage = `url('image/tshirt-${color}.jpg')`;
+        }
+    </script>
+</body>
+</html>
